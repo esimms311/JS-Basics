@@ -20,7 +20,8 @@ var name = 'Tyler';
 
 
   let getName = () => {
-    return prompt('name')
+    let name = prompt("please enter your name");
+    return name;
     
   }
 
@@ -32,8 +33,11 @@ var name = 'Tyler';
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
 
-  let welcome = () => {
-    getName()
+  // 
+  
+  function welcome(){
+    var name = getName();
+    alert("Welcome, " + name);
   }
 
 
@@ -76,7 +80,7 @@ var name = 'Tyler';
 
 //Now alert the result of invoking newMyName
 
-a
+
 
 //////////////////PROBLEM 7////////////////////
 
@@ -85,7 +89,9 @@ a
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   let outerFn = () => {
-    return friend();
+    return function(){
+      return 'Eric'
+    }
   }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
@@ -93,3 +99,4 @@ a
   var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn();
